@@ -2,6 +2,7 @@
 #include <set>
 #include <iostream>
 #include <iomanip>
+#include <numeric>
 #include "bicycle.h"
 
 namespace bicycle {

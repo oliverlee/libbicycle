@@ -26,9 +26,11 @@ if(CMAKE_COMPILER_IS_GNUCXX)
         message(FATAL_ERROR "C++ compiler does not support C++11")
     endif()
     set(CMAKE_CXX_FLAGS "-Wall -Wno-unused-local-typedefs ${ENABLE_CXX11}")
-    set(CMAKE_CXX_FLAGS_DEBUG "-O0 -ggdb3")
-    set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+elseif()
+    set(CMAKE_CXX_FLAGS "-Wall -std=c++11")
 endif()
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -ggdb3")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 find_package(Eigen3 3.1)
 
